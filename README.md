@@ -14,4 +14,5 @@ a pain in the ass, so I have instructions for that below.
 ### FluidSynth
 On Windows, simply copy the FluidSynth directory to be a sibling directory
 of your OpenFrameworks installation, and then when you get linker errors on your
-first build, copy the DLL in FluidSynth/lib to your application bin directory.
+first build, copy the DLL in FluidSynth/lib to your application bin directory. On
+OSX, do the same thing, but you'll have no need to copy DLLs.

@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>088B715C-1141-41BE-9F35-27269BAFC4D8</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>37526DA425E5430474A14FBFA1BC4525160B5FC1</key>
+		<string>https://github.com/kylemcdonald/ofxCv.git</string>
+		<key>4087CA9103B79C5C445141DF14D30B83E787B623</key>
+		<string>https://github.com/whaatt/LaptopAccordion.git</string>
+	</dict>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>37526DA425E5430474A14FBFA1BC4525160B5FC1</key>
+		<string>ofxCv/</string>
+		<key>4087CA9103B79C5C445141DF14D30B83E787B623</key>
+		<string>../../LaptopAccordion</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/kylemcdonald/ofxCv.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>37526DA425E5430474A14FBFA1BC4525160B5FC1</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>4087CA9103B79C5C445141DF14D30B83E787B623</string>
+			<key>IDESourceControlWCCName</key>
+			<string>LaptopAccordion</string>
+		</dict>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>37526DA425E5430474A14FBFA1BC4525160B5FC1</string>
+			<key>IDESourceControlWCCName</key>
+			<string>ofxCv</string>
+		</dict>
+	</array>
+</dict>
+</plist>

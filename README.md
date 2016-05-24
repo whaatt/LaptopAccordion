@@ -12,6 +12,6 @@ up XCode or Visual Studio 2015. Then you have to link FluidSynth, which is kind 
 a pain in the ass, so I have instructions for that below.
 
 ### FluidSynth
-On Windows, simply copy the FluidSynth top-level directory to be a sibling directory
+On Windows, simply copy the FluidSynth directory to be a sibling directory
 of your OpenFrameworks installation, and then when you get linker errors on your
 first build, copy the DLL in FluidSynth/lib to your application bin directory.

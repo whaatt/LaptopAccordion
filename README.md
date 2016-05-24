@@ -9,4 +9,9 @@ in NIME. But to get started, simply grab a fresh installation of OpenFrameworks 
 for your platform, clone the repo, copy the top-level directory corresponding to your
 platform into the apps/myApps directory, rename it to something sensible, and open
 up XCode or Visual Studio 2015. Then you have to link FluidSynth, which is kind of
-a pain in the ass, so I'll eventually have instructions for that.
+a pain in the ass, so I have instructions for that below.
+
+### FluidSynth
+On Windows, simply copy the FluidSynth top-level directory to be a sibling directory
+of your OpenFrameworks installation, and then when you get linker errors on your
+first build, copy the DLL in FluidSynth/lib to your application bin directory.

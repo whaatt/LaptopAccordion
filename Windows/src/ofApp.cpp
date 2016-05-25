@@ -151,9 +151,9 @@ void ofApp::setup() {
 
   // load MIDI instrument number from file
   ifstream inst(prefix + "instrument.txt");
-  int instCode = 21; // default instrument
-  inst >> instCode; // read integer from file
-  synth -> setInstrument(1, instCode - 1);
+  int instCode; // to read in instrument codes
+  while (inst >> instCode) instruments.push_back(instCode);
+  synth -> setInstrument(1, instruments[instIndex] - 1);
 
   // initialize graphics
   ofBackground(190,30,45);
@@ -587,7 +587,7 @@ void ofApp::keyPressed(int key) {
     // hell mode activation by key frequency
     long long thisPress = ofGetElapsedTimeMillis();
     int pressDiff = thisPress - lastPress;
-    lastPress=thisPress;
+    lastPress = thisPress;
     pressCounter++;
 
     // buffer of the last ten diff values
@@ -595,7 +595,7 @@ void ofApp::keyPressed(int key) {
 
     // find avg diff
     int diffSum = 0;
-    for(int i = 0; i < 10; i += 1)
+    for (int i = 0; i < 10; i += 1)
       diffSum = diffSum + pressHist[i];
     avgDiff = diffSum / 10;
 
@@ -620,7 +620,7 @@ void ofApp::keyPressed(int key) {
       }
 
       // note is not already playing: turn it on
-      synth->noteOn(1, notes[i], 127);
+      synth -> noteOn(1, notes[i], 127);
       playing.insert(notes[i]);
       pressed.insert(key);
     }
@@ -723,12 +723,29 @@ void ofApp::keyPressed(int key) {
   // press 2 for toggling volume boost
   if (key == '2') volumeBoost = !volumeBoost;
 
-  // set gain values with arrows
+  // set gain values with left and right arrows
   if ((key == OF_KEY_LEFT && !bassMode) || // inverted switcher in bass mode
-      (key == OF_KEY_RIGHT && bassMode)) gain = gain < 9.8 ? gain + 0.2 : gain;
+    (key == OF_KEY_RIGHT && bassMode)) gain = gain < 9.8 ? gain + 0.2 : gain;
   if ((key == OF_KEY_RIGHT && !bassMode) || // inverted switcher in bass mode
-      (key == OF_KEY_LEFT && bassMode)) gain = gain > 0.2 ? gain - 0.2 : gain;
+    (key == OF_KEY_LEFT && bassMode)) gain = gain > 0.2 ? gain - 0.2 : gain;
   if (key == OF_KEY_LEFT || key == OF_KEY_RIGHT) synth -> setGain(gain);
+
+  // set instruments with up and down arrows
+  if ((key == OF_KEY_DOWN && !bassMode) ||
+    (key == OF_KEY_UP && bassMode)) {
+    instIndex = instIndex + 1;
+    if (instIndex > instruments.size() - 1)
+      instIndex = instruments.size() - 1;
+    synth -> setInstrument(1, instruments[instIndex] - 1);
+  }
+
+  // set instruments with up and down arrows
+  if ((key == OF_KEY_UP && !bassMode) ||
+    (key == OF_KEY_DOWN && bassMode)) {
+    instIndex = instIndex - 1;
+    if (instIndex < 0) instIndex = 0;
+    synth -> setInstrument(1, instruments[instIndex] - 1);
+  }
 
   // press 8 for toggling pitch bend
   if (key == '8' && !bassMode) bend = !bend;
@@ -794,7 +811,7 @@ void ofApp::keyReleased(int key) {
       if (!playing.count(notes[i])) continue;
 
       // note is playing: turn it off
-      synth->noteOff(1, notes[i]);
+      synth -> noteOff(1, notes[i]);
       playing.erase(notes[i]);
       pressed.erase(key);
     }

@@ -18,7 +18,7 @@ the nightmare that is compiling the accordion, read on.
 
 ### FluidSynth Windows
 On Windows, simply copy the FluidSynth directory to be a sibling directory
-of your OpenFrameworks installation. In VS 2015, add all files in the `include`
+of your OpenFrameworks installation. In Visual Studio 2015, add all files in the `include`
 subdirectory to your project (or add that as a compiler search path), then
 add the `lib` directory to the linker search path. Add `libfluidsynth.lib`
 to the list of linkages. Hit build. When you get linker errors on your

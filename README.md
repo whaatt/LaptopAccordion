@@ -21,11 +21,11 @@ On Windows, simply copy the FluidSynth directory to be a sibling directory
 of your OpenFrameworks installation. In Visual Studio 2015, add all files in the `include`
 subdirectory to your project (or add that as a compiler search path), then
 add the `lib` directory to the linker search path. Add `libfluidsynth.lib`
-to the list of linkages. Hit build. When you get linker errors on your
-first build, copy the DLL in `lib` to your application `bin` directory.
+to the list of linkages. Hit build. If and when you get linker errors on
+your first build, copy the DLL in `lib` to your application `bin` directory.
 
 ### FluidSynth OSX
-On OSX, simply copy the FluidSynth directory to be a sibling directory
+On OSX, copy the FluidSynth directory to be a sibling directory
 of your OpenFrameworks installation. In XCode, add all files in the `include`
 subdirectory to your project. Now install [Homebrew](http://brew.sh/) and do `brew
 install fluidsynth` before continuing. With FluidSynth installed, just add the file

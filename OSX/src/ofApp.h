@@ -95,10 +95,12 @@ class ofApp : public ofBaseApp {
     int debounceTime = 35;
 
     // mapping state
+    vector<int> instruments;
     bool bassMode = false;
     int scaleIndex = 0;
     int keyIndex = 0;
     int modeIndex = 0;
+    int instIndex = 0;
 
     // bellows state
     bool sounding = false;

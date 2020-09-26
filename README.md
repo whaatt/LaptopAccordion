@@ -1,6 +1,6 @@
 **Note (September 2020):** This repository is no longer maintained. Check out my personal
 website [repository](https://github.com/whaatt/skalon/tree/master/2020/09/23) for a new web
-app experience, which you can try out [here](https://skalon.com/2020/09/23/).
+app [experience](https://skalon.com/2020/09/23/).
 
 LaptopAccordion
 ===============
